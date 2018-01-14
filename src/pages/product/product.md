@@ -1,7 +1,7 @@
 ---
 templateKey: product-page
 path: /products
-title: Our Coffee
+title: New Title
 image: /img/jumbotron.jpg
 heading: What we offer
 description: >-
