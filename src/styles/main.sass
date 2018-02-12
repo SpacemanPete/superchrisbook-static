@@ -1,0 +1,150 @@
+@import "~bulma/sass/utilities/initial-variables"
+@import "~bulma/sass/utilities/functions"
+
+// Fonts
+@import "~font-face-mixin"
+@include font-face("Comic Book", "../fonts/ComicBook")
+
+$family-sans-serif: "Comic Book", BlinkMacSystemFont, -apple-system, "Segoe UI", "Roboto", "Oxygen", "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue", "Helvetica", "Arial", sans-serif
+$family-primary: $family-sans-serif
+
+$size-1: 5em
+
+
+// Config
+$red: #ED0D1A
+$blue: #3842A0
+$yellow: #F9F237
+$pink: #FC2577
+$orange: #F99633
+$teal: #8BE6E9
+$white: #ffffff
+$black: #000000
+
+$primary: $red
+$primary-invert: $white
+$body-color: $white
+// $link: 
+// $info: 
+// $success: 
+// $warning: 
+// $danger: 
+
+
+
+
+// Helper Classes
+.full-width-image-container
+  width: 100vw
+  height: 400px
+  position: relative
+  left: 50%
+  right: 50%
+  margin: 5em -50vw
+  background-size: cover
+  background-position: bottom
+  display: flex
+  justify-content: center
+  align-items: center
+
+.margin-top-0
+  margin-top: 0 !important
+
+
+
+// Layout
+.flex-wrap
+  display: flex
+  flex-flow: row wrap
+
+
+
+// Begin Header styles
+header
+  background-color: $primary
+
+  nav.navbar
+    background-color: $primary
+
+    img
+      max-height: 100%
+
+    a
+      font-size: 1.5em
+      color: $white
+
+  h1
+    color: blue
+// End Header styles
+
+
+
+// Begin Hero section
+section.hero
+  background-color: $primary
+
+  .container.section
+    justify-content: center
+
+  .img-wrapper
+    display: inline-block
+    img
+      max-height: 300px
+      margin-right: 40px
+
+  .text-wrapper
+    display: inline-block
+
+    h1.hero-title
+      font-size: 5em
+
+    .hero-subtitle
+      font-size: 3em
+
+// End Hero section
+
+
+// Begin About Preview section
+
+section.buy-book
+  background-color: $yellow
+
+  h2
+    color: $black
+
+// End Hero section
+
+
+// Begin About Preview section
+section.about-preview
+  background-color: $blue
+
+  .text-wrapper
+    h2.section-title
+      font-size: 3em
+
+    .description
+
+// End About Preview section
+
+
+
+// Begin Footer styles
+footer.footer
+  background-color: $red
+  
+  a
+    color: $white
+    line-height: 1.2
+    
+  ul
+    display: flex
+    flex-flow: row wrap
+    li
+      display: inline-block
+      padding: 0 20px
+      a:hover
+        text-decoration: underline
+// End Footer styles
+
+@import "~bulma"
