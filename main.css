@@ -1,0 +1,333 @@
+/* Fonts */
+
+@font-face {
+  font-family: 'ComicBook';
+  src: url('../fonts/ComicBook.eot');
+  src: url('../fonts/ComicBook.woff2') format('woff2'), url('../fonts/ComicBook.woff') format('woff'), url('../fonts/ComicBook.ttf') format('truetype'), url('../fonts/ComicBook.svg#ComicBook') format('svg'), url('../fonts/ComicBook.eot?#iefix') format('embedded-opentype');
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'ComicBook-Bold';
+  src: url('../fonts/ComicBook-Bold.eot');
+  src: url('../fonts/ComicBook-Bold.woff2') format('woff2'), url('../fonts/ComicBook-Bold.woff') format('woff'), url('../fonts/ComicBook-Bold.ttf') format('truetype'), url('../fonts/ComicBook-Bold.svg#ComicBook-Bold') format('svg'), url('../fonts/ComicBook-Bold.eot?#iefix') format('embedded-opentype');
+  font-weight: normal;
+  font-style: normal;
+}
+
+html {
+  font-size: 1em;
+}
+
+body {
+  font-family: 'ComicBook', serif !important;
+  font-weight: 400;
+  line-height: 1.45;
+  color: #fff;
+}
+
+p {
+  margin-bottom: 1.3em;
+}
+
+h1, h2, h3, h4 {
+  margin: 1.414em 0 0.5em;
+  font-weight: inherit;
+  line-height: 1.2;
+}
+
+h1 {
+  margin-top: 0;
+  font-size: 5.063em;
+}
+
+h2 {
+  font-size: 3.375em;
+}
+
+h3 {
+  font-size: 2.25em;
+}
+
+h4 {
+  font-size: 1.5em;
+}
+
+.lead {
+  font-size: 1.5em;
+}
+
+p {
+  font-size: 1.1em;
+  line-height: 1.6;
+}
+
+small, .font_small {
+  font-size: 0.667em;
+}
+
+/* General styles */
+
+body {
+  background-color: #f00100;
+  color: #fff;
+  font-family: 'Helvetica', sans-serif;
+}
+
+.flex-wrap {
+  display: flex;
+  flex-flow: row wrap;
+}
+
+img {
+  height: auto;
+  width: 100%;
+  margin: 0 auto;
+}
+
+ul {
+  list-style: none;
+}
+
+a {
+  transition: all .5s ease;
+  transition-property: color, background-color, border;
+}
+
+/* Header */
+
+header {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  z-index: 10;
+  background-color: #f00200;
+  border-bottom: 5px solid #F8F237;
+}
+
+header .navbar .container {
+  display: flex;
+  flex-flow: row nowrap;
+  justify-content: space-between;
+  padding: 0px 20px;
+  margin: 0 auto;
+  max-width: 1220px;
+}
+
+/* header .navbar-brand figure {
+  transition: all .3s ease;
+}
+
+header .navbar-brand:hover img {
+  max-width: 165px;
+} */
+
+header .navbar .container .navbar-end {
+  display: flex;
+  flex-flow: row nowrap;
+  height: 40px;
+  width: 325px;
+  vertical-align: middle;
+  margin: 20px 0;
+}
+
+header .navbar .container .navbar-end li {
+  height: 40px;
+}
+
+header .navbar .container .navbar-end li:not(:last-of-type) {
+  height: 40px;
+  margin-right: 20px;
+  vertical-align: top;
+}
+
+header .navbar .container .navbar-end li a {
+  height: 40px;
+  line-height: 40px;
+  white-space: nowrap;
+  text-decoration: none;
+  color: #fff;
+}
+
+header .navbar .container .navbar-end li a:hover,
+header .navbar .container .navbar-end li a:focus {
+  color: #3842A0;
+}
+
+.navbar-brand img {
+  max-width: 145px;
+}
+
+/* Main */
+
+main {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  text-align: center;
+  margin-top: 90px;
+}
+
+main .container {
+  max-width: 900px;
+  margin: 0 auto;
+}
+
+/* Begin Hero section */
+
+section#hero .container.section {
+  justify-content: center;
+  margin: 100px auto;
+}
+
+section#hero .container.section .img-wrapper {
+  display: inline-block;
+  width: 45%;
+}
+
+section#hero .container.section .text-wrapper {
+  display: inline-block;
+  width: 55%;
+}
+
+section#hero .container.section .img-wrapper img {
+  max-width: 400px;
+  margin-right: 40px;
+}
+
+/* End Hero section */
+
+/* Begin About  */
+
+section#about {
+  background-color: #3842A0;
+}
+
+section#about .text-wrapper {
+}
+
+section#about .image-wrapper {
+  position: relative;
+  padding: 0 120px;
+}
+
+section#about .image-wrapper a.caption {
+  display: block;
+  position: absolute;
+  top: 60%;
+  left: 80px;
+  background-color: #f00200;
+  color: #fff;
+  padding: 15px 35px;
+  margin: 0;
+  text-decoration: none;
+  border: 3px solid #f00200;
+}
+
+section#about .image-wrapper h2 {
+  font-size: 2.25em;
+  line-height: 1em;
+  margin: 0;
+  padding-bottom: 5px;
+}
+
+section#about .image-wrapper a.caption:hover, 
+section#about .image-wrapper a.caption:focus {
+  background-color: #3842A0;
+  color: #F9F237;
+  border: 3px solid #F8F237;
+  
+} 
+
+/* End About  */
+
+/* Begin Siema Slider */
+#siema-slider {
+  position: relative;
+  padding: 0 120px;
+}
+
+#siema-slider h1.title {
+  display: block;
+  position: absolute;
+  bottom: 30%;
+  left: 80px;
+  background-color: #f00200;
+  color: #fff;
+  padding: 15px 35px;
+  margin: 0;
+  text-decoration: none;
+  border: 3px solid #f00200;
+  z-index: 2;
+  font-size: 1.5em;
+  line-height: 1.5;
+}
+
+#siema-slider .siema-slide {
+  position: relative;
+}
+
+#siema-slider .siema-slide .caption {
+  position: absolute;
+  top: 75%;
+  right: 0;
+  width: 75%;
+  color: #000;
+  background-color: #F8F237;
+  border: 3px solid #000;
+  padding: 20px;
+}
+
+/* End Siema Slider */
+
+/* Begin Buy Book Section */
+section#buy-book {
+  background-color: #F9F237;
+  color: #000;
+}
+
+/* End Buy Book Section */
+
+/* Footer */
+
+footer {
+  padding: 50px;
+  margin: 0 auto;
+  max-width: 1220px;
+  text-align: center;
+}
+
+footer a {
+  color: #3842A0;
+} 
+
+footer ul {
+  display: flex;
+  flex-flow: row wrap;
+  display: inline-block;
+  margin-bottom: 50px;
+}
+
+footer ul li {
+  display: inline-block;
+  padding: 0 20px;
+}
+
+footer ul li a {
+  text-decoration: none;
+  font-size: 1.5em;
+}
+footer ul li a:hover {
+  /* text-decoration: underline */
+}
+
+footer .attribution a {
+  color: #3842A0;
+  text-decoration: none;
+}
+
+footer .attribution a:hover,
+footer .attribution a:focus {
+  /* text-decoration: underline; */
+}

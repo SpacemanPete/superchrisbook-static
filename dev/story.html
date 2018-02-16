@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<!--[if lt IE 7]> <html lang="en" class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
+<!--[if IE 7]> <html lang="en" class="no-js lt-ie9 lt-ie8"> <![endif]-->
+<!--[if IE 8]> <html lang="en" class="no-js lt-ie9"> <![endif]-->
+<!--[if gt IE 8]><!-->
+<html lang="en" class="no-js">
+<!--<![endif]-->
+
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <title>Super Chris Book</title>
+  <meta name="description" content="">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel='stylesheet' href='./styles/sanitize.min.css'>
+  <link rel='stylesheet' href='./styles/main.css'>
+</head>
+
+<body>
+  <!--[if lt IE 7]> <p class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a href="#">upgrade your browser</a> to improve your experience.</p> <![endif]-->
+
+  <!-- Begin Header -->
+  <header>
+    <nav class="navbar is-transparent">
+      <div class="container">
+        <div class="navbar-brand">
+          <a href="/" class="navbar-item">
+            <figure class="image">
+              <img src="./img/logo.png" alt="Superchris" />
+            </figure>
+          </a>
+        </div>
+        <ul class="navbar-end">
+          <li>
+            <a class="navbar-item" href="/">Home</a>
+          </li>
+          <li>
+            <a class="navbar-item" href="/story.html">Chris' Story</a>
+          </li>
+          <li>
+            <a class="navbar-item" href='/#buy-book'>Buy the book!</a>
+          </li>
+          <li>
+            <div id="my-cart-13051025">
+              <div class='cart-icon-placeholder' style="width:33px;height:40px;"></div>
+            </div>
+          </li>
+        </ul>
+      </div>
+    </nav>
+  </header>
+  <!-- End Header -->
+
+  <!-- Begin Main -->
+  <main>
+
+    <!-- Begin About Section -->
+    <section id="about">
+      <div class='container section'>
+        <div id='siema-slider'>
+          <h1 class='title'>SUPER CHRIS!</h1>
+          <div class="siema">
+            <div class="siema-slide">
+              <img src='./img/optimized/super_chris_overlooking_the_city-min.jpg' alt='SUPERCHRIS overlooking the city'>
+              <div class='caption'>Here’s the story of a boy, who never wore a frown. His smile lights up the city, like a King’s blinged out crown.</div>
+            </div>
+            <div class="siema-slide">
+              <img src='./img/optimized/Chris_smiling_green_striped_shirt-min.jpg' alt='Chris smiling in a green-striped shirt'>
+              <div class='caption'>Lorem ipsum dolor sit amet consectetur adipisicing elit. Accusamus, sapiente ducimus. Qui necessitatibus earum atque. </div>
+            </div>
+            <div class="siema-slide">
+              <img src='./img/optimized/Chris_Curly_Hair-min.jpg' alt='Chris with curly hair'>
+              <div class='caption'>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Nisi tenetur aspernatur accusamus placeat ex velit.</div>
+            </div>
+            <div class="siema-slide">
+              <img src='./img/optimized/Chris_riding_in_shopping_cart-min.jpg' alt='Chris riding in a shopping cart'>
+              <div class='caption'>Lorem ipsum dolor sit amet consectetur adipisicing elit. Similique praesentium voluptatem dolore. Dolorem, porro cum.</div>
+            </div>
+          </div>
+          <button class="prev">prev</button>
+          <button class="next">next</button>
+        </div>
+      </div>
+    </section>
+    <!-- End About Section -->
+
+    <!-- Begin Buy Book Section -->
+    <section id="buy-book">
+      <div class='container section flex-wrap'>
+        <h2>Buy The Book!</h2>
+        <div id="my-store-13051025"></div>
+      </div>
+    </section>
+    <!-- End Buy Book Section -->
+
+  </main>
+  <!-- End Main -->
+
+  <!-- Begin Footer -->
+  <footer class="footer">
+    <ul>
+      <li>
+        <a href='https://mpssociety.org/' class='footer-link'>mpssociety.org</a>
+      </li>
+      <li>
+        <a href='/#buy-book' class='footer-link'>Buy the book</a>
+      </li>
+    </ul>
+    <div class='attribution'>
+      <span>Site design by
+        <a href='https://www.spacemandev.com'>SpacemanDev</a> and hosting by
+        <a href='https://www.netlify.com'>Netlify.</a>
+      </span>
+      <span>Copyright &copy;
+        <script>document.write(new Date().getFullYear())</script>
+      </span>
+    </div>
+  </footer>
+  <!-- End Footer -->
+
+  <!-- Add main.js script -->
+  <script src="./js/main.js"></script>
+
+  <!-- Begin Siema Slider config -->
+  <script src="./js/vendor/siema.min.js"></script>
+  <script>
+    const mySiema = new Siema({ loop: true });
+    document.querySelector('.prev').addEventListener('click', () => mySiema.prev());
+    document.querySelector('.next').addEventListener('click', () => mySiema.next());
+  </script>
+  <!-- End Siema Slider config -->
+
+  <!-- Begin Ecwid Store integration -->
+  <script data-cfasync="false" type="text/javascript" src="https://app.ecwid.com/script.js?13051025&data_platform=code&data_date=2018-02-13"
+    charset="utf-8"></script>
+  <script type="text/javascript"> xMinicart("id=my-cart-13051025"); </script>
+  <script type="text/javascript"> xProductBrowser("categoriesPerRow=3", "views=grid(20,3) list(60) table(60)", "categoryView=grid", "searchView=list", "id=my-store-13051025");</script>
+  <!-- End Ecwid Store integration -->
+</body>
+
+</html>
