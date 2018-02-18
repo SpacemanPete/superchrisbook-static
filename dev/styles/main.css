@@ -173,8 +173,15 @@ main .container {
   margin: 0 auto;
 }
 
+@media only screen and (max-width: 560px) {
+  main .container {
+    padding: 0 20px;
+  }
+} /* end media breakpoint @ 560px */
+
 section {
   padding: 80px 0;
+  border-bottom: 3px solid #000;
 }
 /* Begin Hero section */
 
@@ -198,6 +205,18 @@ section#hero .container.section .img-wrapper img {
   margin-right: 40px;
 }
 
+@media only screen and (max-width: 560px) {
+  section#hero .container.section {
+    flex-flow: row wrap;
+  }
+  section#hero .container.section > div {
+    width: 100% !important;
+  }
+  section#hero .container.section .img-wrapper {
+    margin: 0 10% 30px;
+  }
+} /* end media breakpoint @ 560px */
+
 /* End Hero section */
 
 /* Begin About  */
@@ -207,24 +226,28 @@ section#about {
 }
 
 section#about .text-wrapper {
+  margin-bottom: 40px;
 }
 
 section#about .image-wrapper {
   position: relative;
-  padding: 0 120px;
+  max-width: 600px;
+  margin: 0 auto;
+  border: 3px solid #000;
 }
 
 section#about .image-wrapper a.caption {
   display: block;
   position: absolute;
   top: 60%;
-  left: 80px;
+  left: 0;
   background-color: #f00200;
   color: #fff;
   padding: 15px 35px;
   margin: 0;
+  margin-left: -20px;
   text-decoration: none;
-  border: 3px solid #f00200;
+  border: 3px solid #000;
 }
 
 section#about .image-wrapper h2 {
