@@ -32,9 +32,6 @@
         </div>
         <ul class="navbar-end">
           <li>
-            <a class="navbar-item" href="/dev/">Home</a>
-          </li>
-          <li>
             <a class="navbar-item" href="/dev/story.html">Chris' Story</a>
           </li>
           <li>
@@ -55,7 +52,7 @@
 
     <!-- Begin Hero Section -->
     <section id="hero">
-      <div class='container section flex-wrap'>
+      <div class='container section flex flex-wrap'>
         <div class='img-wrapper'>
           <img src="./img/main_image.png" alt='SUPERCHRIS in a box car' />
         </div>
@@ -87,9 +84,16 @@
 
     <!-- Begin Buy Book Section -->
     <section id="buy-book">
-      <div class='container section flex-wrap'>
+      <div class='container section'>
         <h2>Buy The Book!</h2>
-        <div id="my-store-13051025"></div>
+        <div class="ecwid ecwid-SingleProduct-v2 ecwid-SingleProduct-v2-centered ecwid-Product ecwid-Product-101046579" itemscope itemtype="http://schema.org/Product" data-single-product-id="101046579">
+          <div itemprop="image"></div>
+          <div class='text-wrapper'>
+            <div class="ecwid-title" itemprop="name" content="SUPERCHRIS #1"></div>
+            <div customprop="qty"></div>
+            <div customprop="addtobag"></div>
+          </div>
+        </div>
       </div>
     </section>
     <!-- End Buy Book Section -->
@@ -123,10 +127,9 @@
   <script src="./js/main.js"></script>
 
   <!-- Begin Ecwid Store integration -->
-  <script data-cfasync="false" type="text/javascript" src="https://app.ecwid.com/script.js?13051025&data_platform=code&data_date=2018-02-13"
-    charset="utf-8"></script>
+  <script data-cfasync="false" type="text/javascript" src="https://app.ecwid.com/script.js?13051025&data_platform=singleproduct_v2" charset="utf-8"></script>
+  <script type="text/javascript">xProduct()</script>
   <script type="text/javascript"> xMinicart("id=my-cart-13051025"); </script>
-  <script type="text/javascript"> xProductBrowser("categoriesPerRow=3", "views=grid(20,3) list(60) table(60)", "categoryView=grid", "searchView=list", "id=my-store-13051025");</script>
   <!-- End Ecwid Store integration -->
 </body>
 
