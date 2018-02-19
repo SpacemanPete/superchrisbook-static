@@ -394,13 +394,16 @@ section#about .image-wrapper a.caption:focus {
     border: 3px solid #000 !important;
     width: calc( 49% - (0px + 120 * ((100vw - 320px) / (900 - 320))) );
   }
+} /* end media breakpoint @ 768px */
+
+@media only screen and (min-width: 320px) {
   #siema-slider .prev {
     left: calc(0px + 120 * ((100vw - 320px) / (900 - 320)));
   }
   #siema-slider .next {
     right: calc(0px + 120 * ((100vw - 320px) / (900 - 320)));
   }
-} /* end media breakpoint @ 768px */
+} /* end media breakpoint @ 320px */
 
 /* End Siema Slider */
 
@@ -431,7 +434,8 @@ html#ecwid_html body#ecwid_body .ecwid.ecwid-SingleProduct-v2 form .ecwid-Single
 
 html#ecwid_html body#ecwid_body div.ecwid-ProductBrowserPopup > div {
   border: 3px solid #000 !important;
-  border-radius: none !important;
+  border-radius: 0 !important;
+  background-color: #3842A0 !important;
 }
 html#ecwid_html body#ecwid_body div.ecwid-ProductBrowserPopup .ecwid-ProductBrowserPopup-content {
   min-height: auto !important;
@@ -442,6 +446,10 @@ html#ecwid_html body#ecwid_body div.ecwid-productBrowser {
   padding-top: 30px !important;
   padding-bottom: 30px !important;
 }
+html#ecwid_html body#ecwid_body div.ecwid-productBrowser .gwt-Label {
+  color: #fff !important;
+  font-size: 18px !important;
+}
 html#ecwid_html body#ecwid_body div.ecwid-productBrowser-cart td.ecwid-productBrowser-cart-itemsTable-cell-price .ecwid-productBrowser-price, 
 html#ecwid_html body#ecwid_body div.ecwid-productBrowser-cart td.ecwid-productBrowser-cart-itemsTable-cell-subtotal .ecwid-productBrowser-price,
 html#ecwid_html body#ecwid_body .ecwid div.ecwid-productBrowser-head {
@@ -450,13 +458,73 @@ html#ecwid_html body#ecwid_body .ecwid div.ecwid-productBrowser-head {
 
 html#ecwid_html body#ecwid_body .ecwid .ecwid-btn {
   font-size: 14px !important;
+  background-color: #3842A0 !important;
+  border-radius: 0 !important;
+  border: 3px solid #000 !important;
+  padding: 10px 30px !important;
 }
 html#ecwid_html body#ecwid_body .ecwid .ecwid-btn:hover,
 html#ecwid_html body#ecwid_body .ecwid .ecwid-btn:focus {
-  background-color: #3842A0 !important;
+  background-color: #f00100 !important;
   color: #fff !important;
 }
+html#ecwid_html body#ecwid_body td.ecwid-productBrowser-cart-itemsTable-headerCell,
+html#ecwid_html body#ecwid_body div.ecwid-productBrowser-cart-hint {
+  color: #000 !important;
+}
 
+html#ecwid_html body#ecwid_body button.ecwid-popup-closeButton {
+  background-color: transparent !important;
+  width: 25px !important;
+  height: 25px !important;
+  border-radius: 0 !important;
+  background-size: 20px auto !important;
+  top: 0px !important;
+  right: 0px !important;
+}
+
+html#ecwid_html body#ecwid_body div.ecwid-productBrowser-cart-removeItemButton {
+  content: 'Remove';
+  top: 40px !important;
+  right: 15px !important;
+  background-color: transparent !important;
+  background-size: 20px auto !important;
+  width: 25px !important;
+  height: 25px !important;
+}
+
+html#ecwid_html body#ecwid_body div.ecwid-productBrowser-cart-removeItemButton:before {
+  content: 'Remove' !important;
+  color: #f00100 !important;
+  font-size: 16px !important;
+  position: absolute !important;
+  width: 80px !important;
+  top: 0px !important;
+  right: 5px !important;
+}
+
+@media only screen and (max-width: 624px) {
+  html#ecwid_html body#ecwid_body div.ecwid-productBrowser-cart-removeItemButton {
+    content: 'Remove';
+    top: 12px !important;
+    right: 75px !important;
+    background-color: transparent !important;
+    background-size: 20px auto !important;
+    width: 25px !important;
+    height: 25px !important;
+  }
+  html#ecwid_html body#ecwid_body div.ecwid-productBrowser-cart-itemsTable-price-compact-times {
+    left: -8px !important;
+    top: 15px !important;
+  }
+  html#ecwid_html body#ecwid_body .ecwid .ecwid-btn {
+    font-size: 14px !important;
+    background-color: #3842A0 !important;
+    border-radius: 0 !important;
+    border: 3px solid #000 !important;
+    padding: 10px 10px !important;
+  }
+} /* end media breakpoint @ 624p x */
 /* End Buy Book Section */
 
 /* Footer */
