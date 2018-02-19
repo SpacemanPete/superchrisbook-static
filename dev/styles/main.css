@@ -92,7 +92,7 @@ header {
   width: 100%;
   z-index: 10;
   background-color: #f00200;
-  border-bottom: 5px solid #;
+  border-bottom: 3px solid #F9F237;
   color: #000;;
 }
 
@@ -185,6 +185,12 @@ section {
   padding: 80px 0;
   border-bottom: 3px solid #000;
 }
+
+@media only screen and (max-width: 768px) {
+  section {
+    padding: 40px 0;
+  }
+} /* end media breakpoint @ 768px */
 /* Begin Hero section */
 
 section#hero .container.section {
@@ -241,7 +247,7 @@ section#about .image-wrapper {
 section#about .image-wrapper a.caption {
   display: block;
   position: absolute;
-  bottom: 60%;
+  bottom: 30%;
   left: 0;
   background-color: #f00200;
   color: #fff;
@@ -261,9 +267,9 @@ section#about .image-wrapper h2 {
 
 section#about .image-wrapper a.caption:hover, 
 section#about .image-wrapper a.caption:focus {
-  background-color: #3842A0;
-  color: #F9F237;
-  border: 3px solid #;
+  background-color: #F9F237;
+  color: #000;
+  border: 3px solid #000;
   color: #000;;
   
 } 
@@ -273,7 +279,13 @@ section#about .image-wrapper a.caption:focus {
 /* Begin Siema Slider */
 #siema-slider {
   position: relative;
-  padding: 0 120px;
+  /* padding: 0 120px; */
+  padding-left: calc(0px + 120 * ((100vw - 320px) / (900 - 320)));
+  padding-right: calc(0px + 120 * ((100vw - 320px) / (900 - 320)));
+}
+
+#siema-slider .siema img {
+  border: 3px solid #000;
 }
 
 #siema-slider h1.title {
@@ -292,24 +304,46 @@ section#about .image-wrapper a.caption:focus {
   line-height: 1.5;
 }
 
+#siema-slider .prev {
+  left: 4%;
+  background-color: transparent;
+  border-top: 60px solid transparent;
+  border-bottom: 60px solid transparent; 
+  border-right:60px solid lightgray; 
+  border-left: none;
+}
+#siema-slider .next {
+  right: 4%;
+  background-color: transparent;
+  border-top: 60px solid transparent;
+  border-bottom: 60px solid transparent;
+  border-left: 60px solid lightgray;
+  border-right: none;
+}
+
 #siema-slider .prev,
 #siema-slider .next {
   position: absolute;
-  top: 0;
-  /* margin-top: -50px; */
-  height: 100%;
-  border: 3px solid #000;
-  background-color: lightgrey;
-  color: #000;
-  width: 7.6%;
-}
-#siema-slider .prev {
-  left: 7%;
-}
-#siema-slider .next {
-  right: 7%;
+  top: 33%;
+  width: 0;
+  height: 0;
+  color: transparent;
+  cursor: pointer;
 }
 
+#siema-slider .prev:focus,
+#siema-slider .next:focus {
+  outline: none;
+}
+
+#siema-slider .prev:focus,
+#siema-slider .prev:hover {
+  border-right: 60px solid #878787 !important; 
+}
+#siema-slider .next:focus,
+#siema-slider .next:hover {
+  border-left: 60px solid #878787;
+}
 #siema-slider .siema-slide {
   position: relative;
 }
@@ -327,6 +361,46 @@ section#about .image-wrapper a.caption:focus {
   border-radius: 50%;
   z-index: 20;
 }
+
+
+@media only screen and (max-width: 768px) {
+  #siema-slider h1.title {
+    position: relative;
+    display: inline-block;
+    margin: 0 auto 40px auto;
+    left: auto;
+  }
+  #siema-slider .prev,
+  #siema-slider .next {
+    top: 35% !important;
+  }
+
+  #siema-slider .siema-slide .caption {
+    position: relative;
+    left: auto;
+    right: auto;
+    bottom: auto;
+    width: 100%;
+    border-radius: 0;
+    margin-top: 15px;
+  }
+  #siema-slider .prev,
+  #siema-slider .next {
+    top: 78px !important;
+    width: auto;
+    height: auto;
+    background-color: lightgray;
+    color: black;
+    border: 3px solid #000 !important;
+    width: calc( 49% - (0px + 120 * ((100vw - 320px) / (900 - 320))) );
+  }
+  #siema-slider .prev {
+    left: calc(0px + 120 * ((100vw - 320px) / (900 - 320)));
+  }
+  #siema-slider .next {
+    right: calc(0px + 120 * ((100vw - 320px) / (900 - 320)));
+  }
+} /* end media breakpoint @ 768px */
 
 /* End Siema Slider */
 
@@ -354,6 +428,35 @@ html#ecwid_html body#ecwid_body .ecwid.ecwid-SingleProduct-v2 form .ecwid-Single
   }
 } /* end media breakpoint @ 560px */
 
+
+html#ecwid_html body#ecwid_body div.ecwid-ProductBrowserPopup > div {
+  border: 3px solid #000 !important;
+  border-radius: none !important;
+}
+html#ecwid_html body#ecwid_body div.ecwid-ProductBrowserPopup .ecwid-ProductBrowserPopup-content {
+  min-height: auto !important;
+}
+html#ecwid_html body#ecwid_body div.ecwid-productBrowser {
+  background-color: #F8F237 !important;
+  color: #000 !important;
+  padding-top: 30px !important;
+  padding-bottom: 30px !important;
+}
+html#ecwid_html body#ecwid_body div.ecwid-productBrowser-cart td.ecwid-productBrowser-cart-itemsTable-cell-price .ecwid-productBrowser-price, 
+html#ecwid_html body#ecwid_body div.ecwid-productBrowser-cart td.ecwid-productBrowser-cart-itemsTable-cell-subtotal .ecwid-productBrowser-price,
+html#ecwid_html body#ecwid_body .ecwid div.ecwid-productBrowser-head {
+  color: #000 !important;
+}
+
+html#ecwid_html body#ecwid_body .ecwid .ecwid-btn {
+  font-size: 14px !important;
+}
+html#ecwid_html body#ecwid_body .ecwid .ecwid-btn:hover,
+html#ecwid_html body#ecwid_body .ecwid .ecwid-btn:focus {
+  background-color: #3842A0 !important;
+  color: #fff !important;
+}
+
 /* End Buy Book Section */
 
 /* Footer */
@@ -363,11 +466,17 @@ footer {
   margin: 0 auto;
   max-width: 1220px;
   text-align: center;
+  color: #000
 }
 
 footer a {
-  color: #3842A0;
+  color: #fff;
 } 
+footer a:hover,
+footer a:focus {
+  color: #3842A0;
+  text-decoration: none;
+}
 
 footer ul {
   display: flex;
@@ -387,18 +496,12 @@ footer ul li a {
   font-size: 1.5em;
 }
 footer ul li a:hover {
-  /* text-decoration: underline */
+  text-decoration: none;
 }
 
 footer .attribution span {
   white-space: nowrap
 }
 footer .attribution a {
-  color: #3842A0;
   text-decoration: none;
-}
-
-footer .attribution a:hover,
-footer .attribution a:focus {
-  text-decoration: underline;
 }
