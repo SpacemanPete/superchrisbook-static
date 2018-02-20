@@ -499,8 +499,6 @@ section#buy-book:before {
 
 @media only screen and (max-width: 768px) {
   section#buy-book:before {
-    content:"";
-    display:block;
     height: 140px;
     margin: -140px 0 0;
   }
