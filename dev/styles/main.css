@@ -389,6 +389,57 @@ section#about .image-wrapper a.caption:focus {
 } /* end media breakpoint @ 900px */
 /* End Siema Slider */
 
+
+/* Begin Story Section */
+section#story .container.section {
+  display: grid;
+  grid-template-columns: 2fr 1fr;
+  grid-template-areas: 
+    " about syndrome "
+    " howToHelp syndrome ";
+}
+
+section#story .container.section > div {
+  padding: 30px 15px;
+}
+
+section#story #about {
+  grid-area: about;
+  background-color: #3842A0;
+  border: 3px solid #000;
+}
+section#story #how-to-help {
+  grid-area: howToHelp;
+  background-color: #F8F237;
+  color: #000;
+  border: 3px solid #000;
+  border-top: none;
+}
+section#story #syndrome {
+  grid-area: syndrome;
+  background-color: #F99633;
+  color: #000;
+  border: 3px solid #000;
+  border-left: none;
+}
+
+@media only screen and (max-width: 768px) {
+  section#story .container.section {
+    display: block;
+  }
+  section#story #about {
+    border: 3px solid #000;
+  }
+  section#story #syndrome,
+  section#story #how-to-help {
+    border: 3px solid #000;
+    border-top: 0;
+  }
+} /* end media breakpoint @ 768px */
+
+/* End Story Section */
+
+
 /* Begin Buy Book Section */
 section#buy-book {
   background-color: #F9F237;
