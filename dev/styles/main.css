@@ -62,11 +62,16 @@ body {
 }
 
 .flex {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
 }
 
 .flex-wrap {
-  flex-flow: row wrap;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-flow: row wrap;
+          flex-flow: row wrap;
 }
 
 img {
@@ -80,7 +85,11 @@ ul {
 }
 
 a {
+  -webkit-transition: all .5s ease;
+  -o-transition: all .5s ease;
   transition: all .5s ease;
+  -webkit-transition-property: color, background-color, border;
+  -o-transition-property: color, background-color, border;
   transition-property: color, background-color, border;
 }
 
@@ -97,17 +106,29 @@ header {
 }
 
 header .navbar .container {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  flex-flow: row nowrap;
-  justify-content: space-between;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-flow: row nowrap;
+          flex-flow: row nowrap;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
   padding: 0px 20px;
   margin: 0 auto;
   max-width: 1220px;
 }
 
 header .navbar .container .navbar-end {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  flex-flow: row nowrap;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-flow: row nowrap;
+          flex-flow: row nowrap;
   min-width: 325px;
   height: 40px;
   vertical-align: middle;
@@ -144,7 +165,10 @@ header .navbar .container .navbar-end li a:focus {
 
 @media only screen and (max-width: 560px) {
   header .navbar .container {
-    flex-flow: row wrap;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-flow: row wrap;
+            flex-flow: row wrap;
 
   }
   header .navbar .container > div {
@@ -162,9 +186,16 @@ header .navbar .container .navbar-end li a:focus {
 /* Main */
 
 main {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  flex-direction: column;
-  justify-content: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
   text-align: center;
   margin-top: 90px;
 }
@@ -194,7 +225,9 @@ section {
 /* Begin Hero section */
 
 section#hero .container.section {
-  justify-content: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
   margin: 0 auto;
 }
 
@@ -215,7 +248,10 @@ section#hero .container.section .img-wrapper img {
 
 @media only screen and (max-width: 560px) {
   section#hero .container.section {
-    flex-flow: row wrap;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-flow: row wrap;
+            flex-flow: row wrap;
   }
   section#hero .container.section > div {
     width: 100% !important;
@@ -392,9 +428,11 @@ section#about .image-wrapper a.caption:focus {
 
 /* Begin Story Section */
 section#story .container.section {
+  display: -ms-grid;
   display: grid;
-  grid-template-columns: 2fr 1fr;
-  grid-template-areas: 
+  -ms-grid-columns: 2fr 1fr;
+      grid-template-columns: 2fr 1fr;
+      grid-template-areas: 
     " about syndrome "
     " howToHelp syndrome ";
 }
@@ -404,11 +442,15 @@ section#story .container.section > div {
 }
 
 section#story #about {
+  -ms-grid-row: 1;
+  -ms-grid-column: 1;
   grid-area: about;
   background-color: #3842A0;
   border: 3px solid #000;
 }
 section#story #how-to-help {
+  -ms-grid-row: 2;
+  -ms-grid-column: 1;
   grid-area: howToHelp;
   background-color: #F8F237;
   color: #000;
@@ -416,6 +458,9 @@ section#story #how-to-help {
   border-top: none;
 }
 section#story #syndrome {
+  -ms-grid-row: 1;
+  -ms-grid-row-span: 2;
+  -ms-grid-column: 2;
   grid-area: syndrome;
   background-color: #F99633;
   color: #000;
@@ -580,8 +625,13 @@ footer a:focus {
 }
 
 footer ul {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  flex-flow: row wrap;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-flow: row wrap;
+          flex-flow: row wrap;
   display: inline-block;
   margin-bottom: 50px;
   padding-left: 0;
