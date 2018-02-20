@@ -490,6 +490,21 @@ section#buy-book {
   background-color: #F9F237;
   color: #000;
 }
+section#buy-book:before {
+  content:"";
+  display:block;
+  height: 120px;
+  margin: -120px 0 0;
+}
+
+@media only screen and (max-width: 768px) {
+  section#buy-book:before {
+    content:"";
+    display:block;
+    height: 140px;
+    margin: -140px 0 0;
+  }
+} /* end media breakpoint @ 768px */
 html#ecwid_html body#ecwid_body .ecwid.ecwid-SingleProduct-v2 form .ecwid-SingleProduct-picture img {
   border: 3px solid #000 !important;
 }
