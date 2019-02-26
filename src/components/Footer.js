@@ -7,11 +7,8 @@ import React from "react"
 const Footer = ({ siteTitle }) => (
   <Footer>
     <div>
-      <Link to="/" >
+      <Link to="https://mpssociety.org" >
         MPSSociety.org
-      </Link>
-      <Link to="/" >
-        Buy the book
       </Link>
       <div>Copyright and stuff</div>
     </div>
