@@ -1,7 +1,7 @@
 module.exports = {
   siteMetadata: {
-    title: `Gatsby & Netlify CMS Kickstart`,
-    description: `A simple project kickstarter with a Gatsby Frontend and a NetlifyCMS backend`,
+    title: `Super Chris`,
+    description: `No frowns, all smiles!`,
     author: `Piotr Butkiewicz @SpacemanPete`,
   },
   plugins: [

@@ -1,8 +1,8 @@
 ---
 templateKey: index-page
-title: Index Page Title
-heading: Index Page Heading
-subheading: This is the Index Page subheading
+title: Super Chris
+heading: Super Chris
+subheading: No frowns, all smiles!
 mainpitch:
   title: Mainpitch Title
   description: >

@@ -86,7 +86,7 @@ export default IndexPage;
 
 export const pageQuery = graphql`
   query AboutPageTemplate {
-    markdownRemark(frontmatter: { templateKey: { eq: "about-page" } }) {
+    markdownRemark(frontmatter: { templateKey: { eq: "story-page" } }) {
       frontmatter {
         title
         heading

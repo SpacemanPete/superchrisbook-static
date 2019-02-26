@@ -1,7 +1,7 @@
 {
-  "name": "gatsby-netlifycms-kickstart",
+  "name": "superchrisbook.com",
   "private": true,
-  "description": "A straightforward way to kickstart a GatsbyJS site with a NetlifyCMS backend",
+  "description": "A custom site for selling the Super Chris Book",
   "version": "0.1.0",
   "author": "Piotr Butkiewicz <piotr@spacemandev.com>",
   "dependencies": {
@@ -35,7 +35,7 @@
     "netlify",
     "netlifycms"
   ],
-  "license": "MIT",
+  "license": "Copyrighted",
   "scripts": {
     "start": "npm run develop",
     "build": "gatsby build",
@@ -45,9 +45,6 @@
   },
   "repository": {
     "type": "git",
-    "url": "https://github.com/SpacemanPete/gatsby-netlifycms-kickstart"
-  },
-  "bugs": {
-    "url": "https://github.com/SpacemanPete/gatsby-netlifycms-kickstart/issues"
+    "url": "https://github.com/SpacemanPete/superchrisbook.com/"
   }
 }
