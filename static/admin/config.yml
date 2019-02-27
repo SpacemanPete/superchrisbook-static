@@ -5,6 +5,18 @@ media_folder: static/img
 public_folder: /img
 
 collections:
+  - name: product
+    label: product
+    folder: src/products
+    create: true
+    slug: {{slug}}
+    fields:
+      - {label: Template Key, name: templateKey, widget: hidden, default: product}
+      - {label: Title, name: title, widget: string}
+      - {label: Featured?, name: featured, widget: boolean}
+      - {label: Image, name: image, widget: image}
+      - {label: Price, name: price, widget: number, valueType: float}
+
   - name: pages
     label: Pages
     files:
@@ -38,3 +50,4 @@ collections:
             fields: 
               - {label: Title, name: title, widget: string}
               - {label: Description, name: description, widget: markdown}
+  
