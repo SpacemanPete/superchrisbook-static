@@ -1,87 +1,65 @@
-import React from "react";
-import PropTypes from "prop-types";
-import { Link, graphql } from "gatsby";
+import React from "react"
+import PropTypes from "prop-types"
+import { graphql } from "gatsby"
 
-import Layout from "../components/Layout";
-
-export const IndexPageTemplate = ({
-  title,
-  heading,
-  subheading
-}) => (
-  <div>
-    <div className="full-width-image margin-top-0">
-      <div>
-        <h1
-          className="has-text-weight-bold is-size-3-mobile is-size-2-tablet is-size-1-widescreen">
-          {title}
-        </h1>
-        <h2
-          className="has-text-weight-bold is-size-5-mobile is-size-5-tablet is-size-4-widescreen">
-          {heading}
-        </h2>
-        <h3
-          className="has-text-weight-bold is-size-5-mobile is-size-5-tablet is-size-4-widescreen">
-          {subheading}
-        </h3>
-      </div>
-    </div>
-    <section className="section section--gradient">
-      <div className="container">
-        <div className="section">
-          <div className="columns">
-            <div className="column is-10 is-offset-1">
-              <div className="content">
-                <div className="content">
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </section>
-  </div>
-);
-
-IndexPageTemplate.propTypes = {
-  title: PropTypes.string,
-  heading: PropTypes.string,
-  subheading: PropTypes.string,
-};
-
-const IndexPage = ({ data }) => {
-
-  const { frontmatter } = data.markdownRemark;
-
-  return (
-    <Layout>
-      <IndexPageTemplate
-        title={frontmatter.title}
-        heading={frontmatter.heading}
-        subheading={frontmatter.subheading}
-      />
-    </Layout>
-  );
-};
-
-IndexPage.propTypes = {
-  data: PropTypes.shape({
-    markdownRemark: PropTypes.shape({
-      frontmatter: PropTypes.object
-    })
-  })
-};
-
-export default IndexPage;
+import Layout from "../components/Layout"
+import SEO from "../components/Seo"
+import Container from '../components/Container'
+import GraphQLErrorList from '../components/Graphql-error-list'
 
 export const pageQuery = graphql`
   query IndexPageTemplate {
-    markdownRemark(frontmatter: { templateKey: { eq: "index-page" } }) {
+    site {
+      siteMetadata {
+        title
+      }
+    }
+
+    indexPage: markdownRemark(frontmatter: { templateKey: { eq: "index-page" } }) {
       frontmatter {
         title
+        templateKey
         heading
         subheading
+        about_section_heading
+        aboutSectionDescription
+        aboutSectionButton
       }
     }
   }
-`;
+`
+
+// IndexPage.propTypes = {
+//   data: PropTypes.shape({
+//     markdownRemark: PropTypes.shape({
+//       frontmatter: PropTypes.object
+//     })
+//   })
+// };
+
+const IndexPage = props => {
+
+  const { data, errors } = props
+  const site = data && data.site
+  const indexPage = data && data.indexPage
+
+  // const { frontmatter } = data.markdownRemark;
+
+  if (errors) {
+    return (
+      <Layout>
+        <GraphQLErrorList errors={errors} />
+      </Layout>
+    )
+  }
+
+  return (
+    <Layout>
+      <SEO title={site.siteMetadata.title} description={site.siteMetadata.description} keywords={site.siteMetadata.keywords} />
+
+      <div>This is the indexpage</div>
+    </Layout>
+  )
+}
+
+export default IndexPage

@@ -20,21 +20,21 @@ const Header = ({ siteTitle }) => (
   //   </div>
   // </header>
   <header>
-    <nav class="navbar is-transparent">
-      <div class="container">
-        <div class="navbar-brand">
-          <a href="/" class="navbar-item">
-            <figure class="image">
+    <nav className="navbar is-transparent">
+      <div className="container">
+        <div className="navbar-brand">
+          <a href="/" className="navbar-item">
+            <figure className="image">
               <img src="./img/logo.png" alt="Superchris" />
             </figure>
           </a>
         </div>
-        <ul class="navbar-end">
+        <ul className="navbar-end">
           <li>
             <Link to="/story">Chris' Story</Link>
           </li>
           <li>
-            <a class="navbar-item" href='#purchase'>Buy the book!</a>
+            <a className="navbar-item" href='#purchase'>Buy the book!</a>
           </li>
           <li>
             <a href="#shopping-cart" className="shopping-cart">Shopping cart</a>
