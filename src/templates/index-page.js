@@ -4,7 +4,7 @@ import { graphql } from "gatsby"
 
 import Layout from "../components/Layout"
 import SEO from "../components/Seo"
-import Container from '../components/Container'
+import Product from '../components/Product'
 import GraphQLErrorList from '../components/Graphql-error-list'
 
 export const pageQuery = graphql`
@@ -18,11 +18,17 @@ export const pageQuery = graphql`
     indexPage: markdownRemark(frontmatter: { templateKey: { eq: "index-page" } }) {
       frontmatter {
         title
+        image {
+          id
+        }
         templateKey
         heading
         subheading
         about_section_heading
         aboutSectionDescription
+        aboutSectionImage {
+          id
+        }
         aboutSectionButton
       }
     }
@@ -42,8 +48,8 @@ const IndexPage = props => {
   const { data, errors } = props
   const site = data && data.site
   const indexPage = data && data.indexPage
+  const { frontmatter } = data.indexPage
 
-  // const { frontmatter } = data.markdownRemark;
 
   if (errors) {
     return (
@@ -57,7 +63,40 @@ const IndexPage = props => {
     <Layout>
       <SEO title={site.siteMetadata.title} description={site.siteMetadata.description} keywords={site.siteMetadata.keywords} />
 
-      <div>This is the indexpage</div>
+      {/* Hero Section */}
+      <section id="hero">
+        <div className='container section flex flex-wrap'>
+          <div className='img-wrapper'>
+            <img src="PLACEHOLDER" alt='SUPERCHRIS in a box car' />
+          </div>
+          <div className='text-wrapper'>
+            <h1 className='hero-title'>Super Chris</h1>
+            <div className='hero-subtitle lead'>No frowns, all smiles!</div>
+          </div>
+        </div>
+      </section>
+
+      {/* About Section */}
+      <section id="about">
+        <div className='container section'>
+          <div className='text-wrapper'>
+            <h2 className='section-title'>About the book</h2>
+            <div className='description'>
+              <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dolore dolores labore nisi fugit magnam maiores veritatis repellat et voluptatum nihil, modi cum molestiae ratione inventore velit hic corporis eos aut placeat voluptas? Culpa quam omnis assumenda corrupti commodi laudantium perferendis!</p>
+              <p>Duis autem vel eum iriure dolor in hendrerit in vulputate velit esse molestie consequat, vel illum</p>
+            </div>
+          </div>
+          <div className='image-wrapper'>
+            <img src='PLACEHOLDER' alt='SUPERCHRIS overlooking the city' />
+            <a href='/dev/story.html' className='caption'><h2>See Chris' Story</h2></a>
+          </div>
+        </div>
+      </section>
+      
+      {/* Featured Product Section */}
+      {/* if graphql data has a featured product then load component */}
+      <Product />
+
     </Layout>
   )
 }
