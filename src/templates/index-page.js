@@ -7,8 +7,7 @@ import Layout from "../components/Layout";
 export const IndexPageTemplate = ({
   title,
   heading,
-  subheading,
-  mainpitch,
+  subheading
 }) => (
   <div>
     <div className="full-width-image margin-top-0">
@@ -34,12 +33,6 @@ export const IndexPageTemplate = ({
             <div className="column is-10 is-offset-1">
               <div className="content">
                 <div className="content">
-                  <div className="tile">
-                    <h1 className="title">{mainpitch.title}</h1>
-                  </div>
-                  <div className="tile">
-                    <h3 className="subtitle">{mainpitch.description}</h3>
-                  </div>
                 </div>
               </div>
             </div>
@@ -54,7 +47,6 @@ IndexPageTemplate.propTypes = {
   title: PropTypes.string,
   heading: PropTypes.string,
   subheading: PropTypes.string,
-  mainpitch: PropTypes.object,
 };
 
 const IndexPage = ({ data }) => {
@@ -67,7 +59,6 @@ const IndexPage = ({ data }) => {
         title={frontmatter.title}
         heading={frontmatter.heading}
         subheading={frontmatter.subheading}
-        mainpitch={frontmatter.mainpitch}
       />
     </Layout>
   );
@@ -90,10 +81,6 @@ export const pageQuery = graphql`
         title
         heading
         subheading
-        mainpitch {
-          title
-          description
-        }
       }
     }
   }
