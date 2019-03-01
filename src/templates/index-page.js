@@ -1,11 +1,12 @@
-import React from "react"
-import PropTypes from "prop-types"
-import { graphql } from "gatsby"
+import React from 'react'
+import PropTypes from 'prop-types'
+import { graphql } from 'gatsby'
 
-import Layout from "../components/Layout"
-import SEO from "../components/Seo"
-import Product from '../components/Product'
+import Layout from '../components/Layout'
 import GraphQLErrorList from '../components/Graphql-error-list'
+import SEO from '../components/Seo'
+import Product from '../components/Product'
+import PreviewCompatibleImage from '../components/PreviewCompatibleImage'
 
 export const pageQuery = graphql`
   query IndexPageTemplate {
@@ -18,8 +19,8 @@ export const pageQuery = graphql`
     indexPage: markdownRemark(frontmatter: { templateKey: { eq: "index-page" } }) {
       frontmatter {
         title
-        image {
-          id
+        mainImage: image {
+          ...galleryImage
         }
         templateKey
         heading
@@ -27,7 +28,7 @@ export const pageQuery = graphql`
         about_section_heading
         aboutSectionDescription
         aboutSectionImage {
-          id
+          ...galleryImage
         }
         aboutSectionButton
       }
@@ -67,7 +68,8 @@ const IndexPage = props => {
       <section id="hero">
         <div className='container section flex flex-wrap'>
           <div className='img-wrapper'>
-            <img src="PLACEHOLDER" alt='SUPERCHRIS in a box car' />
+            <PreviewCompatibleImage imageInfo={frontmatter.mainImage} />
+            {/* <img src="PLACEHOLDER" alt='SUPERCHRIS in a box car' /> */}
           </div>
           <div className='text-wrapper'>
             <h1 className='hero-title'>Super Chris</h1>
@@ -87,6 +89,7 @@ const IndexPage = props => {
             </div>
           </div>
           <div className='image-wrapper'>
+            <PreviewCompatibleImage imageInfo={frontmatter.aboutSectionImage} />
             <img src='PLACEHOLDER' alt='SUPERCHRIS overlooking the city' />
             <a href='/dev/story.html' className='caption'><h2>See Chris' Story</h2></a>
           </div>
