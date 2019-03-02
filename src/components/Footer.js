@@ -17,8 +17,7 @@ const Footer = ({ siteTitle }) => (
     <div className='attribution'>
       <span>Site design by <a href='https://www.spacemandev.com'>SpacemanDev</a>.</span>
         <span>Hosting by <a href='https://www.netlify.com'>Netlify.</a></span>
-      <span>Copyright&copy;
-        <script>document.write(new Date().getFullYear())</script>
+      <span>Copyright&copy; { new Date().getFullYear() }
       </span>
     </div>
   </footer>
