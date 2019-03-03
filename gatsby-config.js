@@ -24,6 +24,13 @@ module.exports = {
     },
     {
       resolve: 'gatsby-source-filesystem',
+      options: {
+        path: `${__dirname}/src/products`,
+        name: 'products',
+      },
+    },
+    {
+      resolve: 'gatsby-source-filesystem',
       options: {  
         path: `${__dirname}/src/img`,
         name: 'images',
@@ -73,6 +80,14 @@ module.exports = {
     //     purgeOnly: ['/all.sass'], // applies purging only on the bulma css file
     //   },
     // }, // must be after other CSS plugins
+    {
+			resolve: 'gatsby-plugin-snipcart',
+			options: {
+        apiKey: 'ST_ZjJlOGQ3YWItNTllZC00MTBmLWJiNTgtNWI4MzIxYWE3OGM0NjM2ODcwODU2NTE3MzkxMzM2',
+        autopop: true,
+        jquery: false
+			}
+		},
     'gatsby-plugin-netlify', // make sure to keep it last in the array
   ],
 }
