@@ -1,18 +1,30 @@
 import React from 'react'
+import PropTypes from 'prop-types'
 
-const Product = props => {
+const Product = ({ productInfo }) => {
+  const { id, title, price, slug, description } = productInfo
   return (
     <div>
-      <section id="buy-book">
-        <div className='container section'>
-          <h2>Buy The Book!</h2>
-          <div className="ecwid ecwid-SingleProduct-v2 ecwid-SingleProduct-v2-centered ecwid-Product ecwid-Product-101046579" data-single-product-id="101046579">
-            Add Snipcart Book Product Here
-          </div>
-        </div>
-      </section>
+      <h2>Buy The Book!</h2>
+      <div  data-item-id={ id }
+            data-item-name={ title }
+            data-item-price={ price}
+            data-item-url={ slug }
+            data-item-description={ description }
+      ></div>
     </div>
   )
 }
+
+Product.propTypes = {
+  productInfo: PropTypes.shape({
+    id: PropTypes.string.isRequired,
+    title: PropTypes.string.isRequired,
+    price: PropTypes.number.isRequired,
+    slug: PropTypes.string.isRequired,
+    description: PropTypes.string,
+  }).isRequired,
+}
+
 
 export default Product
