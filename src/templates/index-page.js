@@ -5,7 +5,7 @@ import { graphql } from 'gatsby'
 import Layout from '../components/Layout'
 import GraphQLErrorList from '../components/Graphql-error-list'
 import SEO from '../components/Seo'
-import Product from '../components/Product'
+import FeaturedProduct from '../components/FeaturedProduct'
 import PreviewCompatibleImage from '../components/PreviewCompatibleImage'
 
 export const pageQuery = graphql`
@@ -90,7 +90,6 @@ const IndexPage = props => {
           </div>
           <div className='image-wrapper'>
             <PreviewCompatibleImage imageInfo={frontmatter.aboutSectionImage} />
-            <img src='PLACEHOLDER' alt='SUPERCHRIS overlooking the city' />
             <a href='/dev/story.html' className='caption'><h2>See Chris' Story</h2></a>
           </div>
         </div>
@@ -98,7 +97,7 @@ const IndexPage = props => {
       
       {/* Featured Product Section */}
       {/* if graphql data has a featured product then load component */}
-      <Product />
+      <FeaturedProduct />
 
     </Layout>
   )

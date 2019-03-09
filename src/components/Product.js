@@ -3,22 +3,29 @@ import PropTypes from 'prop-types'
 
 const Product = ({ productInfo }) => {
   const { id, title, price, slug, description } = productInfo
+
+  console.log('productinfo', productInfo);
+  console.log('id', id);
+  console.log('title', title);
+  console.log('price', price);
+  console.log('slug', slug);
+  console.log('description', description);
+  
   return (
     <div>
-      <h2>Buy The Book!</h2>
       <div  data-item-id={ id }
             data-item-name={ title }
             data-item-price={ price}
             data-item-url={ slug }
             data-item-description={ description }
-      ></div>
+      >Buy now</div>
     </div>
   )
 }
 
 Product.propTypes = {
   productInfo: PropTypes.shape({
-    id: PropTypes.string.isRequired,
+    id: PropTypes.number.isRequired,
     title: PropTypes.string.isRequired,
     price: PropTypes.number.isRequired,
     slug: PropTypes.string.isRequired,
