@@ -1,6 +1,7 @@
 import { Link } from "gatsby"
 import PropTypes from "prop-types"
 import React from "react"
+import logo from '../img/logo.png'
 
 // TODO: Configure Header markup with Logo image, Links & Shopping cart Icon 
 
@@ -11,7 +12,7 @@ const Header = ({ siteTitle }) => (
         <div className="navbar-brand">
           <a href="/" className="navbar-item">
             <figure className="image">
-              <img src="./img/logo.png" alt="Superchris" />
+              <img src={ logo } alt="Superchris" />
             </figure>
           </a>
         </div>
