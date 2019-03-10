@@ -5,3 +5,6 @@
  */
 
 // You can delete this file if you're not using it
+import './src/styles/normalize.min.css'
+import './src/styles/sanitize.min.css'
+import './src/styles/global.css'
