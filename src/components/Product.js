@@ -13,12 +13,12 @@ const Product = ({ productInfo }) => {
   
   return (
     <div>
-      <div  data-item-id={ id }
+      <button  data-item-id={ id }
             data-item-name={ title }
             data-item-price={ price}
             data-item-url={ slug }
             data-item-description={ description }
-      >Buy now</div>
+      >Buy now</button>
     </div>
   )
 }
