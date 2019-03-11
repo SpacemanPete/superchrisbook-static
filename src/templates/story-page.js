@@ -1,83 +1,114 @@
-import React from "react";
-import PropTypes from "prop-types";
-import { Link, graphql } from "gatsby";
+import React from "react"
+import PropTypes from "prop-types"
+import { Link, graphql } from "gatsby"
 
-import Layout from "../components/Layout";
+import Layout from "../components/Layout"
+import GraphQLErrorList from '../components/Graphql-error-list'
+import SEO from '../components/Seo'
+import FeaturedProduct from '../components/FeaturedProduct'
+import PreviewCompatibleImage from '../components/PreviewCompatibleImage'
 
-export const AboutPageTemplate = ({
-  title,
-  heading,
-  subheading,
-}) => (
-  <div>
-    <div className="full-width-image margin-top-0">
-      <div>
-        <h1
-          className="has-text-weight-bold is-size-3-mobile is-size-2-tablet is-size-1-widescreen">
-          {title}
-        </h1>
-        <h2
-          className="has-text-weight-bold is-size-5-mobile is-size-5-tablet is-size-4-widescreen">
-          {heading}
-        </h2>
-        <h3
-          className="has-text-weight-bold is-size-5-mobile is-size-5-tablet is-size-4-widescreen">
-          {subheading}
-        </h3>
-      </div>
-    </div>
-    <section className="section section--gradient">
-      <div className="container">
-        <div className="section">
-          <div className="columns">
-            <div className="column is-10 is-offset-1">
-              <div className="content">
-                <div className="content">
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </section>
-  </div>
-);
+// data query 
+export const StoryPageQuery = graphql`
+  query StoryPageTemplate {
+    site {
+      siteMetadata {
+        title
+      }
+    }
 
-AboutPageTemplate.propTypes = {
-  title: PropTypes.string,
-  heading: PropTypes.string,
-  subheading: PropTypes.string,
-};
-
-const IndexPage = ({ data }) => {
-
-  const { frontmatter } = data.markdownRemark;
-
-  return (
-    <Layout>
-      <AboutPageTemplate />
-    </Layout>
-  );
-};
-
-IndexPage.propTypes = {
-  data: PropTypes.shape({
-    markdownRemark: PropTypes.shape({
-      frontmatter: PropTypes.object
-    })
-  })
-};
-
-export default IndexPage;
-
-export const pageQuery = graphql`
-  query AboutPageTemplate {
-    markdownRemark(frontmatter: { templateKey: { eq: "story-page" } }) {
+    storyPage: markdownRemark(frontmatter: { templateKey: { eq: "story-page" } }) {
       frontmatter {
         title
-        heading
-        subheading
       }
     }
   }
-`;
+`
+
+// define component
+const StoryPage = props => {
+
+  const { data, errors } = props
+  const site = data && data.site
+  const storyPage = data && data.storyPage
+  const { frontmatter } = data.storyPage
+
+  if (errors) {
+    return (
+      <Layout>
+        <GraphQLErrorList errors={errors} />
+      </Layout>
+    )
+  }
+
+  return (
+    <Layout>
+      <SEO title={site.siteMetadata.title} description={site.siteMetadata.description} keywords={site.siteMetadata.keywords} />
+
+      {/* Slider section */}
+      <section id="about">
+        <div class='container section'>
+          <div id='siema-slider'>
+            <h1 class='title'>SUPER CHRIS!</h1>
+            <div class="siema">
+              <div class="siema-slide">
+                <img src='./img/optimized/super_chris_overlooking_the_city-min.jpg' alt='SUPERCHRIS overlooking the city' />
+                <div class='caption'>Here’s the story of a boy, who never wore a frown. His smile lights up the city, like a King’s blinged out crown.</div>
+              </div>
+              <div class="siema-slide">
+                <img src='./img/optimized/Chris_smiling_green_striped_shirt-min.jpg' alt='Chris smiling in a green-striped shirt' />
+                <div class='caption'>Lorem ipsum dolor sit amet consectetur adipisicing elit. Accusamus, sapiente ducimus. Qui necessitatibus earum atque. </div>
+              </div>
+              <div class="siema-slide">
+                <img src='./img/optimized/Chris_Curly_Hair-min.jpg' alt='Chris with curly hair' />
+                <div class='caption'>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Nisi tenetur aspernatur accusamus placeat ex velit.</div>
+              </div>
+              <div class="siema-slide">
+                <img src='./img/optimized/Chris_riding_in_shopping_cart-min.jpg' alt='Chris riding in a shopping cart' />
+                <div class='caption'>Lorem ipsum dolor sit amet consectetur adipisicing elit. Similique praesentium voluptatem dolore. Dolorem, porro cum.</div>
+              </div>
+            </div>
+            <button class="prev">PREV</button>
+            <button class="next">NEXT</button>
+          </div>
+        </div>
+      </section>
+
+      {/* About Hurler's Syndrome Section */}
+      <section id='story'>
+        <div class='container section'>
+          <div id='about' class='box blue'>
+            <h2>About the book</h2>
+            <div class='text'>
+              <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat.</p>
+              <p> Ut wisi enim ad minim veniam, quis nostrud exerci tation ullamcorper suscipit lobortis nisl ut aliquip ex ea commodo consequat.</p>
+            </div>
+          </div>
+          <div id='how-to-help' class='box red'>
+            <h2>How you can help</h2>
+            <div class='text'>
+                <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat.</p>
+                <p>Ut wisi enim ad minim veniam, quis nostrud exerci tation ullamcorper suscipit lobortis nisl ut aliquip ex ea commodo consequat.</p>
+            </div>
+          </div>
+          <div id='syndrome' class='box orange'>
+            <h2>Hurler's Syndrome</h2>
+            <div class='text'>
+                <p>Also known as MPS, is a rare disease in which a person cannot break down certain types of sugar molecules found throughout the body.</p>
+                <p>It can affect bones, heart, eyes and joints and is treated using enzyme replacement therapy.</p>
+                <p>It does not affect a person’s smile, spirit or hope, as evidenced by Christopher Hohn (also known as Super Chris).</p>
+                <p>Please visit mpssociety.org for more information.</p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* Product Section */}
+      {/* if graphql data has a featured product then load component */}
+      <FeaturedProduct />
+
+    </Layout>
+  )
+}
+
+export default StoryPage
