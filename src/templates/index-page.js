@@ -36,14 +36,6 @@ export const pageQuery = graphql`
   }
 `
 
-// IndexPage.propTypes = {
-//   data: PropTypes.shape({
-//     markdownRemark: PropTypes.shape({
-//       frontmatter: PropTypes.object
-//     })
-//   })
-// };
-
 const IndexPage = props => {
 
   const { data, errors } = props
@@ -69,7 +61,6 @@ const IndexPage = props => {
         <div className='container section flex flex-wrap'>
           <div className='img-wrapper'>
             <PreviewCompatibleImage imageInfo={frontmatter.mainImage} />
-            {/* <img src="PLACEHOLDER" alt='SUPERCHRIS in a box car' /> */}
           </div>
           <div className='text-wrapper'>
             <h1 className='hero-title'>Super Chris</h1>
