@@ -1,17 +1,17 @@
 ---
 templateKey: story-page
 storyImages: 
-  - image: 
+  - image: /img/Chris_smiling_green_striped_shirt.jpg
     caption: Lorem ipsum dolor sit amed
-  - image: 
+  - image: /img/FullSizeRender 31 Chris Curly Hair.jpg
     caption: Lorem ipsum dolor sit amed
-  - image: 
+  - image: /img/Chris_riding_in_shopping_cart.jpg
     caption: Lorem ipsum dolor sit amed
-  - image: 
+  - image: /img/super_chris_overlooking_the_city.jpg
     caption: Lorem ipsum dolor sit amed
-  - image: 
+  - image: /img/Chris_wearing_bandana.jpg
     caption: Lorem ipsum dolor sit amed
-  - image: 
+  - image: /img/Chris_wearing_knit_beard_and_hat.jpg
     caption: Lorem ipsum dolor sit amed
 copySection: 
   - title: About the book
