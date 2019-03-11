@@ -3,7 +3,7 @@ templateKey: story-page
 storyImages: 
   - image: /img/Chris_smiling_green_striped_shirt.jpg
     caption: Lorem ipsum dolor sit amed
-  - image: /img/FullSizeRender 31 Chris Curly Hair.jpg
+  - image: /img/Chris_with_curly_hair.jpg
     caption: Lorem ipsum dolor sit amed
   - image: /img/Chris_riding_in_shopping_cart.jpg
     caption: Lorem ipsum dolor sit amed
