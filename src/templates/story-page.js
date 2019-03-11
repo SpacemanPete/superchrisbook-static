@@ -33,6 +33,9 @@ const StoryPage = props => {
   const storyPage = data && data.storyPage
   const { frontmatter } = data.storyPage
 
+  console.log("props", props);
+  
+
   if (errors) {
     return (
       <Layout>
@@ -47,53 +50,53 @@ const StoryPage = props => {
 
       {/* Slider section */}
       <section id="about">
-        <div class='container section'>
+        <div className='container section'>
           <div id='siema-slider'>
-            <h1 class='title'>SUPER CHRIS!</h1>
-            <div class="siema">
-              <div class="siema-slide">
+            <h1 className='title'>SUPER CHRIS!</h1>
+            <div className="siema">
+              <div className="siema-slide">
                 <img src='./img/optimized/super_chris_overlooking_the_city-min.jpg' alt='SUPERCHRIS overlooking the city' />
-                <div class='caption'>Here’s the story of a boy, who never wore a frown. His smile lights up the city, like a King’s blinged out crown.</div>
+                <div className='caption'>Here’s the story of a boy, who never wore a frown. His smile lights up the city, like a King’s blinged out crown.</div>
               </div>
-              <div class="siema-slide">
+              <div className="siema-slide">
                 <img src='./img/optimized/Chris_smiling_green_striped_shirt-min.jpg' alt='Chris smiling in a green-striped shirt' />
-                <div class='caption'>Lorem ipsum dolor sit amet consectetur adipisicing elit. Accusamus, sapiente ducimus. Qui necessitatibus earum atque. </div>
+                <div className='caption'>Lorem ipsum dolor sit amet consectetur adipisicing elit. Accusamus, sapiente ducimus. Qui necessitatibus earum atque. </div>
               </div>
-              <div class="siema-slide">
+              <div className="siema-slide">
                 <img src='./img/optimized/Chris_Curly_Hair-min.jpg' alt='Chris with curly hair' />
-                <div class='caption'>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Nisi tenetur aspernatur accusamus placeat ex velit.</div>
+                <div className='caption'>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Nisi tenetur aspernatur accusamus placeat ex velit.</div>
               </div>
-              <div class="siema-slide">
+              <div className="siema-slide">
                 <img src='./img/optimized/Chris_riding_in_shopping_cart-min.jpg' alt='Chris riding in a shopping cart' />
-                <div class='caption'>Lorem ipsum dolor sit amet consectetur adipisicing elit. Similique praesentium voluptatem dolore. Dolorem, porro cum.</div>
+                <div className='caption'>Lorem ipsum dolor sit amet consectetur adipisicing elit. Similique praesentium voluptatem dolore. Dolorem, porro cum.</div>
               </div>
             </div>
-            <button class="prev">PREV</button>
-            <button class="next">NEXT</button>
+            <button className="prev">PREV</button>
+            <button className="next">NEXT</button>
           </div>
         </div>
       </section>
 
       {/* About Hurler's Syndrome Section */}
       <section id='story'>
-        <div class='container section'>
-          <div id='about' class='box blue'>
+        <div className='container section'>
+          <div id='about' className='box blue'>
             <h2>About the book</h2>
-            <div class='text'>
+            <div className='text'>
               <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat.</p>
               <p> Ut wisi enim ad minim veniam, quis nostrud exerci tation ullamcorper suscipit lobortis nisl ut aliquip ex ea commodo consequat.</p>
             </div>
           </div>
-          <div id='how-to-help' class='box red'>
+          <div id='how-to-help' className='box red'>
             <h2>How you can help</h2>
-            <div class='text'>
+            <div className='text'>
                 <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat.</p>
                 <p>Ut wisi enim ad minim veniam, quis nostrud exerci tation ullamcorper suscipit lobortis nisl ut aliquip ex ea commodo consequat.</p>
             </div>
           </div>
-          <div id='syndrome' class='box orange'>
+          <div id='syndrome' className='box orange'>
             <h2>Hurler's Syndrome</h2>
-            <div class='text'>
+            <div className='text'>
                 <p>Also known as MPS, is a rare disease in which a person cannot break down certain types of sugar molecules found throughout the body.</p>
                 <p>It can affect bones, heart, eyes and joints and is treated using enzyme replacement therapy.</p>
                 <p>It does not affect a person’s smile, spirit or hope, as evidenced by Christopher Hohn (also known as Super Chris).</p>
