@@ -13,4 +13,3 @@ aboutSectionDescription: >
 aboutSectionImage: /img/super_chris_overlooking_the_city-min.jpg
 aboutSectionButton: See Chris' Story
 ---
-
