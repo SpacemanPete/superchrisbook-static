@@ -19,7 +19,16 @@ export const StoryPageQuery = graphql`
 
     storyPage: markdownRemark(frontmatter: { templateKey: { eq: "story-page" } }) {
       frontmatter {
-        title
+        storyImages {
+          image {
+            ...galleryImage
+          }
+          caption
+        }
+        copySection {
+          title
+          description
+        }
       }
     }
   }
