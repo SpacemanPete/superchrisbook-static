@@ -26,9 +26,6 @@ const FeaturedProduct = () => {
 
   const productInfo = FeaturedProductQuery.markdownRemark.frontmatter
 
-  console.log('productInfo', productInfo);
-  
-
   return (
     <section id={ productInfo.id }>
       <div className='container section'>

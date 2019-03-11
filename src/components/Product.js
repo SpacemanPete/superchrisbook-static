@@ -4,13 +4,6 @@ import PropTypes from 'prop-types'
 const Product = ({ productInfo }) => {
   const { id, title, price, slug, description } = productInfo
 
-  console.log('productinfo', productInfo);
-  console.log('id', id);
-  console.log('title', title);
-  console.log('price', price);
-  console.log('slug', slug);
-  console.log('description', description);
-  
   return (
     <div>
       <button  data-item-id={ id }
